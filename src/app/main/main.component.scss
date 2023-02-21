@@ -1,0 +1,42 @@
+.nav {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  background: transparent linear-gradient(133deg, #6600FF 0%, #5300CF 100%) 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.nav-item {
+  color: #ffffff;
+  text-decoration: none;
+  background: none;
+  padding: 18px 24px;
+  font-size: 18px;
+  line-height: 22px;
+  display: inline-block;
+
+  &.active {
+    background: #7127DF;
+  }
+}
+ 
+.left, .right {
+  flex: 1;
+}
+
+.left {
+  margin-left: 18px;
+}
+ 
+.right {
+  margin-right: 24px;
+  text-align: right;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin: 24px;
+}

@@ -1,0 +1,19 @@
+<div class="container">
+   <div class="nav">
+      <div class="left">
+      <h1>MyApp</h1>
+      </div>
+      <div class="right">
+         <a [routerLink]="['/products', 1]" class="nav-item active" [ngClass]="{ active : activePage === 1 }">ONE</a>
+         <a [routerLink]="['/products', 2]" class="nav-item active" [ngClass]="{ active : activePage === 2 }">TWO</a>
+      </div>
+   </div>
+   <div class="main">
+      <app-product 
+         *ngFor="let product of products" 
+         [product]="product"
+         [activeItem]="activeItem"
+         (toggleItemStatus)="toggleItem($event)">
+      </app-product>
+   </div>
+</div>

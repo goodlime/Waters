@@ -1,0 +1,6 @@
+<div class="product" [ngStyle]="{'background-color': product.bgColor}" [ngClass]="{'disabled': disabled}">
+   <h3>{{ product.title | uppercase }}</h3>
+   <span>{{ selected ? 'BOUGHT!' : product.price | currency : 'USD' : 'symbol' : '1.0-0' }}</span>
+   <p>{{ product.description }}</p>
+   <button (click)="buyProduct(product)" [disabled]="disabled">{{ selected ? 'CANCEL' : 'BUY' }}</button>
+</div>
